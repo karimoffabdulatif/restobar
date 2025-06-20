@@ -48,7 +48,7 @@ const Hero = () => {
 						</p>
 					</div>
 					<div className="flex gap-8 pt-5">
-						<button className="bg-amber-500 px-12 py-3 text-2xl rounded-sm hover:bg-amber-600 transition">
+						<button className="bg-amber-500 animate-pulse px-12 py-3 text-2xl rounded-sm hover:bg-amber-600 transition">
 							Menu
 						</button>
 						<button className="bg-amber-500 px-12 py-3 text-2xl rounded-sm hover:bg-amber-600 transition">

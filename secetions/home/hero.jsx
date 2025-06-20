@@ -12,7 +12,7 @@ const Hero = () => {
 			<div className="absolute inset-0 z-[-10]">
 				<Swiper
 					modules={[Autoplay]}
-					autoplay={{ delay: 5000, disableOnInteraction: false }}
+					autoplay={{ delay: 3000, disableOnInteraction: false }}
 					loop={true}
 					slidesPerView={1}
 					className="w-full h-full"

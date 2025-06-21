@@ -10,8 +10,12 @@ import 'swiper/css/effect-fade'
 
 const Hero = () => {
 	return (
-		<section className="relative w-full h-[695px]">
-			{/* Swiper background */}
+		<section className="relative w-full 
+  h-[400px] 
+  sm:h-[500px] 
+  md:h-[600px] 
+  lg:h-[800px] 
+  xl:h-[1000px]">			{/* Swiper background */}
 			<div className="container mx-auto h-[695px] w-full absolute inset-0 z-[-10]">
 				<Swiper
 					modules={[Autoplay, EffectFade]}

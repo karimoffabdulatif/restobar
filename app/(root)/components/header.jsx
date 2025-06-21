@@ -16,6 +16,22 @@ export default function Header() {
 		{ label: "Ру", icon: "/ru.png", name: "RU" },
 		{ label: "Eng", icon: "/en.png", name: "ENG" },
 	]
+	const [isScrolled, setIsScrolled] = useState(false)
+
+useEffect(() => {
+	const handleScroll = () => {
+		if (window.scrollY > 10) {
+			setIsScrolled(true)
+		} else {
+			setIsScrolled(false)
+		}
+	}
+
+	window.addEventListener('scroll', handleScroll)
+
+	return () => window.removeEventListener('scroll', handleScroll)
+}, [])
+
 
 	useEffect(() => {
 		const handleClickOutside = (event) => {
@@ -41,8 +57,8 @@ export default function Header() {
 	const selectedLangObj = languages.find(lang => lang.label === selectedLang)
 
 	return (
-		<header className="fixed  sm:mt-0 w-full z-50 bg-transparent text-white">
-			<div className="container mx-auto px-2 sm:px-14 mt-[-50px] flex items-center justify-between py-4 relative">
+<header className={`fixed w-full z-50 h-[95px] text-white transition-colors duration-300 ${isScrolled ? 'bg-[#0F172B]' : 'bg-transparent'}`}>
+			<div className="container mx-auto px-2 sm:px-14 mt-[-60px] flex items-center justify-between py-4 relative">
 
 				{/* Logo */}
 				<div className="flex ml-3  sm:ml-0 w-[140px] items-center mt-4 sm:mt-0 sm:w-[35%]">

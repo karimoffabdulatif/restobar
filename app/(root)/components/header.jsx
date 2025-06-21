@@ -41,11 +41,11 @@ export default function Header() {
 	const selectedLangObj = languages.find(lang => lang.label === selectedLang)
 
 	return (
-		<header className="fixed top-0 left-0 w-full z-50 bg-transparent text-white">
+		<header className="fixed mt-2 sm:mt-0 left-0 w-full z-50 bg-transparent text-white">
 			<div className="container mx-auto mt-[-50px] flex items-center justify-between py-4 relative">
 
 				{/* Logo */}
-				<div className="flex ml-3 sm:ml-0 w-[190px] items-center mt-4 sm:mt-0 sm:w-[35%]">
+				<div className="flex ml-3 sm:ml-0 w-[140px] items-center mt-4 sm:mt-0 sm:w-[35%]">
 					<Image src="/logo3.png" alt="Logo" width={200} height={100} />
 				</div>
 
@@ -84,7 +84,7 @@ export default function Header() {
 										onClick={() => handleLanguageChange(lang.label)}
 										className="px-4 py-2 hover:bg-amber-100 cursor-pointer flex items-center gap-2 border-b last:border-none"
 									>
-										<Image src={lang.icon} alt={lang.name} width={20} height={20} className="w-5 h-5" />
+										<Image src={lang.icon} alt={lang.name} width={20} height={20} className="w-2 h-2" />
 										{lang.name}
 									</li>
 								))}

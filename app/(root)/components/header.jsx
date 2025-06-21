@@ -12,9 +12,9 @@ export default function Header() {
 	const langRef = useRef(null)
 
 	const languages = [
-		{ label: "O'z", icon: "/pngegg.png", name: "O‘zbek" },
-		{ label: "Ру", icon: "/ru.png", name: "Русский" },
-		{ label: "Eng", icon: "/en.png", name: "English" },
+		{ label: "O'z", icon: "/pngegg.png", name: "UZ" },
+		{ label: "Ру", icon: "/ru.png", name: "RU" },
+		{ label: "Eng", icon: "/en.png", name: "ENG" },
 	]
 
 	useEffect(() => {
@@ -45,7 +45,7 @@ export default function Header() {
 			<div className="container mx-auto mt-[-50px] flex items-center justify-between py-4 relative">
 
 				{/* Logo */}
-				<div className="flex ml-3 sm:ml-0 w-[140px] items-center mt-4 sm:mt-0 sm:w-[35%]">
+				<div className="flex ml-3  sm:ml-0 w-[140px] items-center mt-4 sm:mt-0 sm:w-[35%]">
 					<Image src="/logo3.png" alt="Logo" width={200} height={100} />
 				</div>
 
@@ -53,16 +53,16 @@ export default function Header() {
 				<nav className="hidden lg:flex w-[65%] justify-end items-center gap-4 mt-[-10px]">
 					<ul className="flex gap-6 text-2xl font-medium">
 						<li><Link href="/" className="text-amber-500">Home</Link></li>
-						<li><Link href="/menu" className="hover:text-amber-400 transition">Menu</Link></li>
-						<li><Link href="/about" className="hover:text-amber-400 transition">About Us</Link></li>
-						<li><Link href="/contact" className="hover:text-amber-400 transition">Contact</Link></li>
+						<li><Link href="/menu" className="hover:text-amber-500 transition">Menu</Link></li>
+						<li><Link href="/about" className="hover:text-amber-500 transition">About Us</Link></li>
+						<li><Link href="/contact" className="hover:text-amber-500 transition">Contact</Link></li>
 					</ul>
 
 					{/* Desktop til tanlash */}
 					<div className="relative ml-6" ref={langRef}>
 						<button
 							onClick={() => setOpenLang(!openLang)}
-							className="bg-amber-500 px-6 py-1 text-xl rounded-sm hover:bg-amber-600 transition flex items-center gap-2"
+							className="bg-amber-500 px-4 py-1 text-xl rounded-sm hover:bg-amber-600 transition flex items-center gap-2"
 						>
 							<span className="text-white">{selectedLangObj?.name}</span>
 							<svg
@@ -77,14 +77,14 @@ export default function Header() {
 						</button>
 
 						{openLang && (
-							<ul className="absolute left-0 mt-2 bg-white text-black rounded-md shadow-md w-[120px] z-50 overflow-hidden font-semibold">
+							<ul className="absolute left-0 mt-2 bg-white text-black rounded-md shadow-md w-[80px] z-50 overflow-hidden font-semibold">
 								{sortedLanguages.map(lang => (
 									<li
 										key={lang.label}
 										onClick={() => handleLanguageChange(lang.label)}
 										className="px-4 py-2 hover:bg-amber-100 cursor-pointer flex items-center gap-2 border-b last:border-none"
 									>
-										<Image src={lang.icon} alt={lang.name} width={20} height={20} className="w-2 h-2" />
+										<Image src={lang.icon} alt={lang.name} width={20} height={20} className="w-4 h-4" />
 										{lang.name}
 									</li>
 								))}
@@ -128,16 +128,14 @@ export default function Header() {
 						})}
 					</ul>
 
-					{/* Til tanlash */}
-					<div className="relative ml-6 mt-4 mb-4" ref={langRef}>
+					<div className="relative ml-10 mt-4 mb-4" ref={langRef}>
 						<button
 							onClick={() => setOpenLang(!openLang)}
-							className="flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-md text-lg transition duration-300 shadow-md"
+							className="flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-6 py-2 rounded-md text-lg transition duration-300 shadow-md"
 						>
 							{selectedLangObj?.name}
 							<svg
-								className={`w-4 h-4 transition-transform duration-200 ${openLang ? 'rotate-180' : 'rotate-0'
-									}`}
+								className={`w-4 h-4 transition-transform duration-200 ${openLang ? 'rotate-180' : 'rotate-0'}`}
 								fill="none"
 								stroke="currentColor"
 								strokeWidth="2"
@@ -147,8 +145,9 @@ export default function Header() {
 							</svg>
 						</button>
 
+						{/* Bu yerni absolute emas, relative qilib qo’yamiz */}
 						{openLang && (
-							<ul className="absolute mt-2 bg-white font-semibold border border-gray-200 rounded-md shadow-lg w-36 z-50 overflow-hidden">
+							<ul className="mt-2 bg-white text-black font-semibold border border-gray-200 rounded-md shadow-lg w-24 z-50 overflow-hidden transition-all duration-300">
 								{sortedLanguages.map(lang => (
 									<li
 										key={lang.label}
@@ -163,9 +162,13 @@ export default function Header() {
 						)}
 					</div>
 
-						<div className='border w-[40px] flex justify-center mb-3 text-center ml-[170px]  py-[1px] bg-white'>
 
-						</div>
+					<div
+						onClick={() => setIsSidebarOpen(false)}
+						className="border w-[100px] py-[2px] mb-2 bg-white text-black text-center mx-auto rounded cursor-pointer hover:bg-amber-100 transition"
+					>
+					</div>
+
 				</div>
 
 

@@ -96,7 +96,7 @@ export default function Header() {
 				{/* Hamburger menyu */}
 				<button
 					onClick={() => setIsSidebarOpen(true)}
-					className="lg:hidden text-white text-5xl"
+					className="lg:hidden text-white text-4xl"
 				>
 					<HiMenu />
 				</button>

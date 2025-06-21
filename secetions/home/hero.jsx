@@ -37,7 +37,7 @@ const Hero = () => {
 
 			<div className="relative z-20 min-h-screen flex items-center text-white text-3xl  sm:px-4">
 				<div className="container mx-auto w-full max-w-screen-xl">
-					<div className="sm:w-[500px] pt-[150px] sm:pt-[100px]">
+					<div className="sm:w-[500px] pt-[70px] sm:pt-[100px]">
 						<h1 className="text-center sm:text-start text-5xl sm:text-6xl font-serif font-bold">Enjoy Our Delicious Meal</h1>
 						<p className="text-xl pt-5 text-center sm:text-start">
 							Delicious meals, a warm atmosphere, and unforgettable moments!

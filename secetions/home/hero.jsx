@@ -10,13 +10,9 @@ import 'swiper/css/effect-fade'
 
 const Hero = () => {
 	return (
-		<section className="relative w-full 
-  h-[400px] 
-  sm:h-[500px] 
-  md:h-[600px] 
-  lg:h-[800px] 
-  xl:h-[1000px]">			{/* Swiper background */}
-			<div className="container mx-auto h-[695px] w-full absolute inset-0 z-[-10]">
+		<section className="relative w-full h-screen ">
+			{/* Swiper background */}
+			<div className="absolute inset-0 w-full h-screen z-[-10]">
 				<Swiper
 					modules={[Autoplay, EffectFade]}
 					autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -40,21 +36,21 @@ const Hero = () => {
 			</div>
 
 			{/* Overlay */}
-			<div className="container mx-auto absolute inset-0 h-[695px] bg-gray-900/70 z-[-5]" />
+			<div className=" absolute inset-0 h-screen bg-gray-900/70 z-[-5]" />
 
 			{/* Text content */}
-			<div className="relative z-20 h-[695px] flex items-center text-white text-3xl sm:px-4">
-				<div className="container px-14 mx-auto w-full">
+			<div className="relative z-20 h-screen flex items-center text-white text-3xl sm:px-4">
+				<div className="container px-4 sm:px-14 mx-auto w-full">
 					<motion.div
 						initial={{ x: -100, opacity: 0 }}
 						animate={{ x: 0, opacity: 1 }}
 						transition={{ duration: 1, ease: 'easeOut' }}
-						className="sm:w-[500px] pt-[70px] sm:pt-[100px]"
+						className="sm:w-[500px] pt-[40px] sm:pt-[100px]"
 					>
-						<h1 className="text-center sm:text-start text-5xl sm:text-6xl varela-round-regula font-bold">
+						<h1 className="text-center sm:text-start  text-4xl sm:text-6xl varela-round-regula font-bold">
 							Enjoy Our Delicious Meal
 						</h1>
-						<p className="text-xl pt-5 opacity-70 text-center sm:text-start">
+						<p className="text-lg sm:text-xl pt-5 opacity-70 text-center sm:text-start">
 							Delicious meals, a warm atmosphere, and unforgettable moments!
 							Every dish is a work of art crafted with love. At our restaurant, every bite brings joy and warmth.
 						</p>
@@ -64,12 +60,12 @@ const Hero = () => {
 						initial={{ x: -100, opacity: 0 }}
 						animate={{ x: 0, opacity: 1 }}
 						transition={{ duration: 1.2, delay: 0.3, ease: 'easeOut' }}
-						className="flex gap-8 pt-5 ml-4 sm:ml-0 justify-center sm:justify-start"
+						className="flex gap-4 sm:gap-8 pt-5 ml-2 sm:ml-0 justify-center sm:justify-start"
 					>
-						<button className="bg-amber-500 animate-pulse py-3 px-4 sm:px-12 sm:py-3 text-xl sm:text-2xl rounded-sm hover:bg-amber-600 transition">
+						<button className="bg-amber-500 animate-pulse py-2 px-4 sm:px-10 sm:py-3 text-base sm:text-xl rounded-sm hover:bg-amber-600 transition">
 							Menu
 						</button>
-						<button className="border-amber-500 border text-amber-500 hover:text-white py-3 px-4 sm:px-12 sm:py-3 text-xl sm:text-2xl rounded-sm hover:bg-amber-600 transition">
+						<button className="border-amber-500 border text-amber-500 hover:text-white py-2 px-4 sm:px-10 sm:py-3 text-base sm:text-xl rounded-sm hover:bg-amber-600 transition">
 							Book a table
 						</button>
 					</motion.div>

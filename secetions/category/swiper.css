@@ -1,0 +1,61 @@
+/* Swiper konteyneri uchun 100% balandlik */
+#app {
+  height: 100%;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #000;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #fff;
+}
+
+/* Swiper o'zining o'lchami */
+
+
+/* Slide'lar */
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  margin-top: 50px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ✅ Swiper linear animatsiya */
+.mySwiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+/* ✅ Pagination joylashuvi — pastda markazda */
+.mySwiper .swiper-pagination {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+/* ✅ Pagination nuqtalari rangi */
+.mySwiper .swiper-pagination-bullet {
+  background-color: #ccc !important; /* oddiy nuqtalar */
+  opacity: 1;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: #f59e0b !important; /* aktiv nuqta - amber-500 */
+}

@@ -1,8 +1,7 @@
 import Header from '@/app/(root)/components/header'
 import React from 'react'
 import Hero from './hero'
-import { Category } from '../category/category'
-import Ct from '../ct/ct'
+import Category from '../category/category'
 
 const HomePage = () => {
 	return (
@@ -10,7 +9,6 @@ const HomePage = () => {
 			<Header />
 			<Hero />
 			<Category />
-			<Ct />
 		</>
 	)
 }

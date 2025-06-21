@@ -1,9 +1,68 @@
 import React from 'react'
 
+const categories = [
+  {
+    id: 1,
+    title: 'Burgers',
+    image: '/br.jpg',
+  },
+  {
+    id: 2,
+    title: 'Burgers',
+    image: '/br.jpg',
+  },
+  {
+    id: 3,
+    title: 'Burgers',
+    image: '/br.jpg',
+  },
+]
+
 export const Category = () => {
   return (
-    <div>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus accusantium iste, perspiciatis omnis pariatur quaerat cumque alias odit eos deserunt. Recusandae consequatur illum, vero, aut iusto excepturi sint quos enim quaerat fugiat facilis expedita doloremque doloribus corrupti, mollitia quia adipisci qui quasi asperiores. Ratione sunt minima placeat quo magnam porro esse officia minus dolorem. Error nobis ipsa rerum similique dolore natus optio est nemo, quidem nostrum sunt libero quo iure cumque aliquam alias ea accusamus aliquid tempore molestiae inventore non. Ab ipsam iusto eaque! Accusamus illo ex nihil praesentium, quo architecto numquam quidem ipsam dolor, nulla est molestias voluptate ullam eius earum velit id iste animi voluptatum ratione, aperiam saepe? Pariatur eaque consequatur officiis commodi rem sequi provident exercitationem impedit! Quibusdam, impedit iusto. Autem, sit? Ut, illo veritatis! Odit molestias adipisci neque repellat suscipit rerum similique minima ex. Est ipsam quia quas autem. Vel delectus dolor molestias debitis aperiam sed dignissimos eius dolore! Accusantium ipsum eveniet nihil, quidem veritatis perferendis odio beatae ex aliquam facere nobis illo quaerat, provident nulla cupiditate reiciendis impedit ipsa tempora, reprehenderit asperiores sit quo! Eveniet veritatis porro dignissimos pariatur. Eveniet beatae debitis repudiandae similique! At eum debitis dolorum exercitationem consectetur aperiam ipsum nisi! Cupiditate optio error sequi, obcaecati corporis voluptatum mollitia architecto debitis labore eum totam illum odit eveniet ex earum non ab natus modi, vero aliquid consequatur ipsa. Animi iusto corrupti repellat ipsam fuga, eius perspiciatis deserunt deleniti rem voluptatibus repudiandae saepe ex accusantium similique laudantium distinctio minima, inventore incidunt a, in aliquam officia. Totam sed eius est voluptates dicta enim aspernatur, facere ex itaque voluptatibus ipsam quae ducimus eaque unde neque eveniet natus repudiandae omnis saepe aliquam dignissimos? Corrupti maiores molestiae rem. Sequi nam, culpa quia deserunt magnam consequatur. Dignissimos nisi quisquam nam ipsa aut totam consequatur. Sit quisquam ad dolorem quibusdam nemo.
-    </div>
+    <section className='container mx-auto pt-[60px]'>
+      <div>
+  <div className='flex justify-center items-center gap-2 pb-4'>
+      <div className='border-t border-2 border-amber-500 w-[100px] mt-2'></div>
+
+    <h1 className='text-3xl font-bold lobster-regular whitespace-nowrap px-4 text-amber-500'>Menu Category</h1>
+  <div className='border-t border-2 border-amber-500 w-[100px] mt-2'></div>
+  </div>
+
+        <div className='flex gap-[30px] justify-center pb-10 flex-wrap'>
+          {categories.map((item) => (
+            <div
+              key={item.id}
+              className='bg-white hover:shadow-2xl pb-4 border rounded-2xl transition-all duration-700 '
+              style={{ borderColor: 'rgba(0, 0, 0, 0.1)' }}
+            >
+              {/* Rasm konteyneri */}
+              <div className='overflow-hidden rounded-t-2xl'>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  width={400}
+                  height={600}
+                  className='h-[320px]  object-cover transition-transform duration-300 hover:scale-105'
+                />
+              </div>
+
+              {/* Title */}
+              <p className='text-2xl text-center font-semibold mt-3'>{item.title}</p>
+
+              {/* Button */}
+              <button
+                className='border-amber-500 border text-amber-500 
+                hover:text-white hover:bg-amber-500 
+                transition duration-300 ease-in-out 
+                mb-3 cursor-pointer px-3 py-1 block mx-auto rounded-[4px] mt-2'
+              >
+                View Menu
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }

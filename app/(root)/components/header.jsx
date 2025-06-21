@@ -100,43 +100,44 @@ export default function Header() {
 				>
 					<HiMenu />
 				</button>
-
-				{/* Sidebar menyu */}
-				<div className={`fixed top-0 left-0 w-[320px] h-full bg-white opacity-[98%] text-black z-[999] transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out`}>
-					<div className="flex justify-between items-center px-[22px] py-6 border-b border-black">
-						<div className='pt-3'>
-							<Image src="/logo.svg" alt="Logo" width={200} height={100} />
-						</div>
-						<button onClick={() => setIsSidebarOpen(false)} className="text-black text-3xl">
+				<div
+					className={`fixed top-0 left-0 w-full bg-[#0F172B] text-white z-[999] overflow-hidden transition-all duration-300 ease-in-out ${isSidebarOpen ? 'max-h-[1000px]' : 'max-h-0'
+						}`}
+				>
+					{/* Logo va Yopish tugmasi */}
+					<div className="flex justify-between items-center px-6  border-b border-gray-600">
+						<Image src="/mobile-logo.png" alt="Logo" width={90} height={70} />
+						<button onClick={() => setIsSidebarOpen(false)} className="text-white text-3xl">
 							<HiX />
 						</button>
 					</div>
 
-					<ul className="flex flex-col gap-4 text-xl font-medium p-4">
+					{/* Linklar */}
+					<ul className="flex flex-col gap-4 text-xl font-medium p-6">
 						{["/", "/menu", "/about", "/contact"].map((path, index) => {
 							const names = ["Home", "Menu", "About Us", "Contact"]
 							return (
 								<li key={path}>
-									<button
-										onClick={() => setIsSidebarOpen(false)}
-										className="w-full text-left bg-amber-500 hover:bg-amber-600 text-white text-2xl px-4 py-3 rounded-md transition duration-300"
-									>
-										<Link href={path}>{names[index]}</Link>
-									</button>
+									<Link href={path} onClick={() => setIsSidebarOpen(false)}>
+										<span className="block  text-white hover:text-amber-500 text-xl px-4 py-2 rounded-md transition">
+											{names[index]}
+										</span>
+									</Link>
 								</li>
 							)
 						})}
 					</ul>
 
-					{/* Mobil til tanlash */}
-					<div className="relative ml-6 mt-4" ref={langRef}>
+					{/* Til tanlash */}
+					<div className="relative ml-6 mt-4 mb-4" ref={langRef}>
 						<button
 							onClick={() => setOpenLang(!openLang)}
 							className="flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-5 py-2 rounded-md text-lg transition duration-300 shadow-md"
 						>
 							{selectedLangObj?.name}
 							<svg
-								className={`w-4 h-4 transition-transform duration-200 ${openLang ? 'rotate-180' : 'rotate-0'}`}
+								className={`w-4 h-4 transition-transform duration-200 ${openLang ? 'rotate-180' : 'rotate-0'
+									}`}
 								fill="none"
 								stroke="currentColor"
 								strokeWidth="2"
@@ -161,7 +162,13 @@ export default function Header() {
 							</ul>
 						)}
 					</div>
+
+						<div className='border w-[40px] flex justify-center mb-3 text-center ml-[170px]  py-[1px] bg-white'>
+
+						</div>
 				</div>
+
+
 			</div>
 		</header>
 	)

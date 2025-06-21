@@ -4,14 +4,15 @@ import React from 'react'
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, EffectFade } from 'swiper/modules'
-import { motion } from 'framer-motion' // qo‘shildi
+import { motion } from 'framer-motion'
 import 'swiper/css'
 import 'swiper/css/effect-fade'
 
 const Hero = () => {
 	return (
-		<section className="relative w-full min-h-screen">
-			<div className="absolute inset-0 z-[-10]">
+		<section className="relative w-full h-[695px]">
+			{/* Swiper background */}
+			<div className="container mx-auto h-[695px] w-full absolute inset-0 z-[-10]">
 				<Swiper
 					modules={[Autoplay, EffectFade]}
 					autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -34,10 +35,12 @@ const Hero = () => {
 				</Swiper>
 			</div>
 
-			<div className="absolute inset-0 bg-gray-900/70 z-[-5]" />
+			{/* Overlay */}
+			<div className="container mx-auto absolute inset-0 h-[695px] bg-gray-900/70 z-[-5]" />
 
-			<div className="relative z-20 min-h-screen flex items-center text-white text-3xl sm:px-4">
-				<div className="container mx-auto w-full">
+			{/* Text content */}
+			<div className="relative z-20 h-[695px] flex items-center text-white text-3xl sm:px-4">
+				<div className="container px-14 mx-auto w-full">
 					<motion.div
 						initial={{ x: -100, opacity: 0 }}
 						animate={{ x: 0, opacity: 1 }}

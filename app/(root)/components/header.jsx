@@ -41,7 +41,7 @@ export default function Header() {
 	const selectedLangObj = languages.find(lang => lang.label === selectedLang)
 
 	return (
-		<header className="fixed mt-2 sm:mt-0 w-full z-50 bg-transparent text-white">
+		<header className="fixed  sm:mt-0 w-full z-50 bg-transparent text-white">
 			<div className="container mx-auto px-2 sm:px-14 mt-[-50px] flex items-center justify-between py-4 relative">
 
 				{/* Logo */}
@@ -96,7 +96,7 @@ export default function Header() {
 				{/* Hamburger menyu */}
 				<button
 					onClick={() => setIsSidebarOpen(true)}
-					className="lg:hidden text-white text-4xl"
+					className="lg:hidden text-white pr-4  text-4xl"
 				>
 					<HiMenu />
 				</button>

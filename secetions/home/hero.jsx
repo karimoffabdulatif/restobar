@@ -45,10 +45,10 @@ const Hero = () => {
 						</p>
 					</div>
 					<div className="flex gap-8 pt-5 ml-4 sm:ml-0 justify-center sm:justify-start">
-						<button className="bg-amber-500 animate-pulse px-8 sm:px-12 py-3 text-2xl rounded-sm hover:bg-amber-600 transition">
+						<button className="bg-amber-500 animate-pulse py-3 px-4 sm:px-12  sm:py-3 text-xl sm:text-2xl rounded-sm hover:bg-amber-600 transition">
 							Menu
 						</button>
-						<button className="bg-amber-500 px-8 sm:px-12 py-3 text-2xl rounded-sm hover:bg-amber-600 transition">
+						<button className="border-amber-500 border text-amber-500 hover:text-white  py-3 px-4 sm:px-12  sm:py-3 text-xl sm:text-2xl rounded-sm hover:bg-amber-600 transition">
 							Book a table
 						</button>
 					</div>

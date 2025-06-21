@@ -132,7 +132,7 @@ export default function Header() {
 					<div className="relative ml-6 mt-4 mb-4" ref={langRef}>
 						<button
 							onClick={() => setOpenLang(!openLang)}
-							className="flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-5 py-2 rounded-md text-lg transition duration-300 shadow-md"
+							className="flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-md text-lg transition duration-300 shadow-md"
 						>
 							{selectedLangObj?.name}
 							<svg

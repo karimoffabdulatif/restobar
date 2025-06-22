@@ -66,8 +66,8 @@ useEffect(() => {
 				</div>
 
 				{/* Desktop menyu */}
-				<nav className="hidden lg:flex w-[65%] justify-end items-center gap-4 mt-[-10px]">
-					<ul className="flex gap-6 text-2xl font-medium">
+				<nav className="hidden lg:flex w-[65%] justify-end items-center gap-14 mt-[-10px]">
+					<ul className="flex gap-8 sm:text-[20px] font-medium">
 						<li><Link href="/" className="text-amber-500">Home</Link></li>
 						<li><Link href="/menu" className="hover:text-amber-500 transition">Menu</Link></li>
 						<li><Link href="/about" className="hover:text-amber-500 transition">About Us</Link></li>

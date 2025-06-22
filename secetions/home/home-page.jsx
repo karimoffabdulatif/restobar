@@ -3,6 +3,7 @@ import React from 'react'
 import Hero from './hero'
 import Category from '../category/category'
 import About from '../about/about'
+import Btable from '../book-table/b-table'
 
 const HomePage = () => {
 	return (
@@ -11,6 +12,7 @@ const HomePage = () => {
 			<Hero />
 			<Category />
 			<About />
+			<Btable />
 		</>
 	)
 }

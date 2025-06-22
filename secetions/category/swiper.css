@@ -8,7 +8,6 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: #000;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #fff;
@@ -18,7 +17,7 @@ body {
 
 
 /* Slide'lar */
-.swiper-slide {
+.swiper-slides {
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -28,7 +27,7 @@ body {
   align-items: center;
 }
 
-.swiper-slide img {
+.swiper-slides img {
   margin-top: 50px;
   display: block;
   width: 100%;
@@ -37,12 +36,12 @@ body {
 }
 
 /* ✅ Swiper linear animatsiya */
-.mySwiper .swiper-wrapper {
+.mySwiper .swiper-wrappers {
   transition-timing-function: linear !important;
 }
 
 /* ✅ Pagination joylashuvi — pastda markazda */
-.mySwiper .swiper-pagination {
+.mySwiper .swiper-paginations {
   position: absolute;
   bottom: 0px;
   width: 100%;

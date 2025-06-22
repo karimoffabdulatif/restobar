@@ -21,7 +21,7 @@ const Hero = () => {
 					speed={2000}
 					loop={true}
 					slidesPerView={1}
-					className="w-full h-full"
+					className=" w-full h-full"
 				>
 					<SwiperSlide>
 						<Image src="/bg-banner.jpg" alt="bg1" fill className="object-cover" />

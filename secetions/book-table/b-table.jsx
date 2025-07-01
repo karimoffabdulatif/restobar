@@ -18,21 +18,21 @@ const Btable = () => {
                     </p>
                     <p className='text-amber-500 text-[20px] sm:text-4xl text-center'>We are happy to have you!</p>
 
-                    <div className='block sm:flex sm:gap-5 justify-center ml-2 pt-[30px] '>
+                    <div className='block sm:flex sm:gap-5 justify-center px-5  pt-[30px]'>
                         <input
                             type="text"
                             placeholder="Your name"
-                            className="bg-gray-200 rounded-[5px] w-[325px] px-2 h-auto sm:h-[60px] text-[20px] sm:w-[552px] mb-3 sm:text-2xl sm:px-6 py-[10px] text-black"
+                            className="bg-gray-200 rounded-[5px]  px-7 h-auto sm:h-[60px] text-[20px] sm:w-[552px] mb-3 sm:text-2xl sm:px-6 py-[10px] text-black"
                         />
                         <input
                             type="text"
                             placeholder="Your phone number"
-                            className="bg-gray-200 rounded-[5px] w-[325px] px-2 h-auto sm:h-[60px] text-[20px] sm:w-[552px]  sm:text-2xl sm:px-6 py-[10px] text-black"
+                            className="bg-gray-200 rounded-[5px] px-7 h-auto sm:h-[60px] text-[20px] sm:w-[552px]  sm:text-2xl sm:px-6 py-[10px] text-black"
                         />
 
                     </div>
-                    <div className='block sm:flex justify-center pt-4'>
-                        <button className="bg-amber-500 rounded-[5px] py-3 text-[20px]  w-[325px] sm:text-2xl sm:w-[1125px] ml-2 sm:py-2 hover:bg-amber-600 hover:scale-105 transition duration-300 ease-in-out">
+                    <div className='block sm:flex justify-center px-3 pt-4'>
+                        <button className="bg-amber-500 rounded-[5px] py-3 text-[20px]  px-15 sm:text-2xl sm:w-[1125px] ml-2 sm:py-2 hover:bg-amber-600 hover:scale-105 transition duration-300 ease-in-out">
                             Confirm your booking
                         </button>
                     </div>

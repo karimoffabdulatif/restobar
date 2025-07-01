@@ -57,8 +57,8 @@ useEffect(() => {
 	const selectedLangObj = languages.find(lang => lang.label === selectedLang)
 
 	return (
-<header className={`fixed w-full z-50 h-[95px] text-white transition-colors duration-300 ${isScrolled ? 'bg-[#0F172B]' : 'bg-transparent'}`}>
-			<div className="container mx-auto px-2 sm:px-14 mt-[-60px] flex items-center justify-between py-4 relative">
+<header className={`fixed w-full z-50 h-[95px] text-white mt-[-3px] transition-colors duration-300 ${isScrolled ? 'bg-[#0F172B]' : 'bg-transparent'}`}>
+			<div className="container mx-auto px-2 sm:px-14 mt-[-50px] flex items-center justify-between py-4 sm:py-2 relative">
 
 				{/* Logo */}
 				<div className="flex ml-3  sm:ml-0 w-[140px] items-center mt-4 sm:mt-0 sm:w-[35%]">

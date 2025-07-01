@@ -2,7 +2,7 @@ import React from 'react'
 
 const Btable = () => {
     return (
-        <section className='pt-10 pb-[200px]'>
+        <section className='pt-10 pb-[80px]'>
             <div className='container mx-auto px-6 sm:px-10'>
 
                 <div className='flex justify-center items-center gap-2 pb-4'>

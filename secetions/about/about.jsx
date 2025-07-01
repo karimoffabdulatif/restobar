@@ -55,7 +55,7 @@ const About = () => {
                         />
                     </div>
 
-                    <div className='flex gap-5 pt-5 ml-[40px] sm:pl-22'>
+                    <div className='flex gap-5 pt-5 ml-[40px] sm:ml-0 sm:pl-22'>
                         <motion.img
                             src="/ab2.jpg"
                             alt="about-img"

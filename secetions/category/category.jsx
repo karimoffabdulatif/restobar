@@ -13,32 +13,32 @@ const categories = [
     {
         id: 1,
         title: 'Plows',
-        image: '/br.jpg',
+        image: '/osh.jpg',
         path: 'menu#plows' // ✅ faqat bitta slash bilan boshlanmaydi
     },
     {
         id: 2,
-        title: 'Pizza',
-        image: '/br.jpg',
-        path: 'menu#pizza'
+        title: 'Steyks',
+        image: '/steyk.jpg',
+        path: 'menu#steyks'
     },
     {
         id: 3,
         title: 'Salads',
-        image: '/br.jpg',
+        image: '/salad.jpg',
         path: 'menu#salads'
     },
     {
         id: 4,
-        title: 'Pasta',
-        image: '/br.jpg',
-        path: 'menu#pasta'
+        title: 'Drinks',
+        image: '/drinks.jpg',
+        path: 'menu#drinks'
     },
     {
         id: 5,
-        title: 'Drinks',
-        image: '/br.jpg',
-        path: 'menu#drinks'
+        title: 'Hookah',
+        image: '/hookah.jpg',
+        path: 'menu#hookah'
     },
 ]
 

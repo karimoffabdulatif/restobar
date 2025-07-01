@@ -18,7 +18,7 @@ const Btable = () => {
                     </p>
                     <p className='text-amber-500 text-[20px] sm:text-4xl text-center'>We are happy to have you!</p>
 
-                    <div className='block sm:flex sm:gap-5 justify-center ml-3 pt-[30px] '>
+                    <div className='block sm:flex sm:gap-5 justify-center ml-2 pt-[30px] '>
                         <input
                             type="text"
                             placeholder="Your name"

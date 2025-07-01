@@ -3,7 +3,7 @@ import React from 'react'
 const Btable = () => {
     return (
         <section className='pt-10 pb-[200px]'>
-            <div className='container mx-auto px-8 sm:px-10'>
+            <div className='container mx-auto px-6 sm:px-10'>
 
                 <div className='flex justify-center items-center gap-2 pb-4'>
                     <div className='border-t border-2 border-amber-500 w-[80px] sm:w-[100px] mt-2'></div>
@@ -12,19 +12,30 @@ const Btable = () => {
                     </h1>
                     <div className='border-t border-2 border-amber-500 w-[80px] sm:w-[100px] mt-2'></div>
                 </div>
-                <div className='bg-[#0F172B] rounded-[5px] px-14 py-8'>
-                    <p className='text-white text-2xl text-center'>This address is specifically for you. Now, please fill in the following fields with your personal information.
+                <div className='bg-[#0F172B] rounded-[5px] px-5 sm:px-14 py-8'>
+                    <p className='text-white text-xl sm:text-2xl text-center'>This address is specifically for you. Now, please fill in the following fields with your personal information.
                         After that, our waiters will contact you, and you will be able to share your preferences with them.
                     </p>
-                    <p className='text-amber-500 text-4xl text-center'>We are happy to have you!</p>
+                    <p className='text-amber-500 text-[20px] sm:text-4xl text-center'>We are happy to have you!</p>
 
-                    <div className='flex gap-5 justify-center pt-[30px] '>
-                        <input type="text" className='bg-gray-100 rounded-[5px] px-[180px] py-[10px]' />
-                        <input type="text" className='bg-gray-100 rounded-[5px] px-[180px] py-[10px]' />
+                    <div className='block sm:flex sm:gap-5 justify-center pt-[30px] '>
+                        <input
+                            type="text"
+                            placeholder="Your name"
+                            className="bg-gray-200 rounded-[5px] w-[315px] px-2 text-[20px] sm:w-[552px] mb-3 sm:text-2xl sm:px-6 py-[10px] text-black"
+                        />
+                        <input
+                            type="text"
+                            placeholder="Your phone number"
+                            className="bg-gray-200 rounded-[5px] w-[315px] px-2 text-[20px] sm:w-[552px]  sm:text-2xl sm:px-6 py-[10px] text-black"
+                        />
+
                     </div>
-                        <div className='flex justify-center pt-4'>
-                            <button className='bg-amber-500 rounded-[5px] text-2xl px-[463px] py-2'>Confirm your booking</button>
-                        </div>
+                    <div className='flex justify-center pt-4'>
+                        <button className="bg-amber-500 rounded-[5px] py-3 text-[20px] w-[315px] sm:text-2xl sm:px-[463px] sm:py-2 hover:bg-amber-600 hover:scale-105 transition duration-300 ease-in-out">
+                            Confirm your booking
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>

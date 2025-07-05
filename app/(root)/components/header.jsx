@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 import { HiMenu, HiX } from 'react-icons/hi'
-import LanguageIcon from '@mui/icons-material/Language';
+import LanguageIcon from '@mui/icons-material/Language'
 
 export default function Header() {
 	const [selectedLang, setSelectedLang] = useState("O'z")
@@ -17,9 +17,9 @@ export default function Header() {
 	const langRefMobile = useRef(null)
 
 	const languages = [
-		{ label: "O'z", icon: "/pngegg.png", name: "UZ" },
-		{ label: "Ру", icon: "/ru.png", name: "RU" },
-		{ label: "Eng", icon: "/en.png", name: "ENG" },
+		{ label: "O'z", icon: "/pngegg.png", name: "UZ", Description: "O'zbekcha" },
+		{ label: "Ру", icon: "/ru.png", name: "RU", Description: "Русский" },
+		{ label: "Eng", icon: "/en.png", name: "EN", Description: "English" },
 	]
 
 	const sortedLanguages = [
@@ -50,8 +50,8 @@ export default function Header() {
 		return () => document.removeEventListener('mousedown', handleClickOutside)
 	}, [])
 
-	const handleLanguageChange = (lang) => {
-		setSelectedLang(lang)
+	const handleLanguageChange = (langLabel) => {
+		setSelectedLang(langLabel)
 		setOpenLangDesktop(false)
 		setOpenLangMobile(false)
 	}
@@ -67,7 +67,7 @@ export default function Header() {
 
 				{/* Desktop menyu */}
 				<nav className="hidden lg:flex w-[65%] justify-end items-center gap-14 ">
-					<ul className="flex gap-8 sm:text-[20px] font-medium">
+					<ul className="flex gap-8 sm:text-[18px] font-medium">
 						<li><Link href="/" className="text-amber-500">Home</Link></li>
 						<li><Link href="/category" className="hover:text-amber-500 transition">Category</Link></li>
 						<li><Link href="/home#about" className="hover:text-amber-500 transition">About Us</Link></li>
@@ -78,14 +78,16 @@ export default function Header() {
 					<div className="relative" ref={langRefDesktop}>
 						<button
 							onClick={() => setOpenLangDesktop(!openLangDesktop)}
-							className="flex items-center gap-2 rounded-full border-2 border-gray-400 hover:text-amber-600 hover:border-amber-600 text-white px-4 py-1.5  text-lg transition duration-300 shadow-md "
+							className="flex items-center gap-2 rounded-full border-[0.7px] border-gray-400 hover:border-amber-500 text-white px-2 py-1 text-lg transition duration-300 shadow-md group"
 						>
-							<span className="flex items-center text-gray-400 ">
+							<span className="flex items-center text-gray-400 transition duration-300 group-hover:text-amber-500">
 								<LanguageIcon />
 							</span>
-							{selectedLangObj?.name}
+							{/* Faqat name ko'rsatiladi */}
+							<span className="text-sm font-semibold">{selectedLangObj?.name}</span>
+
 							<svg
-								className={`w-4 h-4 transition-transform duration-200 ${openLangDesktop ? 'rotate-180' : 'rotate-0'}`}
+								className={`w-4 h-4 transition-transform duration-200 ${openLangDesktop ? 'rotate-180' : 'rotate-0'} group-hover:text-amber-500`}
 								fill="none"
 								stroke="currentColor"
 								strokeWidth="2"
@@ -96,20 +98,22 @@ export default function Header() {
 						</button>
 
 						{openLangDesktop && (
-							<ul className="absolute left-0 mt-2 bg-white text-black font-semibold border border-gray-200 rounded-md shadow-lg w-24 z-50 overflow-hidden transition-all duration-300">
+							<ul className="absolute left-0 mt-2 bg-[#0F172B] text-black font-semibold border-[0.7px]  border-gray-400 rounded-2xl p-2 shadow-lg w-40 z-50 overflow-hidden transition-all duration-300">
 								{sortedLanguages.map(lang => (
 									<li
 										key={lang.label}
 										onClick={() => handleLanguageChange(lang.label)}
-										className="flex items-center gap-2 px-4 py-2 hover:bg-amber-100 cursor-pointer transition"
+										className="flex flex-col items-start gap-1 px-4 py-2 hover:bg-[#2c354d] rounded-[9px] cursor-pointer ransition"
 									>
-										<span>{lang.name}</span>
+										<div className='flex gap-2 items-center'>
+											<span className='text-amber-500'>{lang.name}</span>
+											<span className="text-[14px] text-white ">{lang.Description}</span>
+										</div>
 									</li>
 								))}
 							</ul>
 						)}
 					</div>
-
 				</nav>
 
 				{/* Mobil menyu tugmasi */}
@@ -147,18 +151,22 @@ export default function Header() {
 							onClick={() => setOpenLangMobile(!openLangMobile)}
 							className="flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-6 py-2 rounded-md text-lg transition duration-300 shadow-md"
 						>
-							{selectedLangObj?.name}
+							<span>{selectedLangObj?.name}</span>
 							<svg className={`w-4 h-4 transition-transform duration-200 ${openLangMobile ? 'rotate-180' : 'rotate-0'}`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
 								<path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
 							</svg>
 						</button>
 
 						{openLangMobile && (
-							<ul className="mt-2 bg-white text-black font-semibold border border-gray-200 rounded-md shadow-lg w-24 z-50 overflow-hidden transition-all duration-300">
+							<ul className="mt-2 bg-white text-black font-semibold border border-gray-200 rounded-md shadow-lg w-40 z-50 overflow-hidden transition-all duration-300">
 								{sortedLanguages.map(lang => (
-									<li key={lang.label} onClick={() => handleLanguageChange(lang.label)} className="flex items-center gap-2 px-4 py-2 hover:bg-amber-100 cursor-pointer transition">
-										<Image src={lang.icon} alt={lang.name} width={20} height={20} />
+									<li
+										key={lang.label}
+										onClick={() => handleLanguageChange(lang.label)}
+										className="flex items-start flex-col gap-1 px-4 py-2 hover:bg-amber-100 cursor-pointer transition"
+									>
 										<span>{lang.name}</span>
+										<span className="text-[12px] text-gray-500">{lang.Description}</span>
 									</li>
 								))}
 							</ul>

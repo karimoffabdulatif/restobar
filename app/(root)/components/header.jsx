@@ -54,8 +54,8 @@ export default function Header() {
 	}
 
 	return (
-		<header className={`fixed w-full z-50 h-[78px] text-white mt-[-3px] transition-colors duration-300 ${isScrolled ? 'bg-[#0F172B]/98' : 'bg-transparent'}`}>
-			<div className="container mx-auto px-2 sm:px-14 mt-[-52px] flex items-center justify-between py-4 sm:py-2 relative">
+		<header className={`fixed w-full z-50 h-[85px] text-white mt-[-3px] transition-colors duration-300 ${isScrolled ? 'bg-[#0F172B]/98' : 'bg-transparent'}`}>
+			<div className="container mx-auto px-2 sm:px-14 mt-[-48px] flex items-center justify-between py-4 sm:py-2 relative">
 
 				{/* Logo */}
 				<div className="flex ml-3 sm:ml-0 w-[140px] items-center mt-4 sm:mt-0  sm:w-[35%]">
@@ -71,37 +71,37 @@ export default function Header() {
 				{/* Desktop menyu */}
 				<nav className="hidden lg:flex w-[65%] justify-end items-center gap-14">
 					<ul className="flex gap-8 sm:text-[18px] font-medium">
-					{[
-  { href: '/', name: 'Home' },
-  { href: '', name: 'News' },
-  { href: '/category', name: 'Category' },
-  { href: '/home#about', name: 'About Us' },
-  { href: '/contact', name: 'Contact' },
-].map(({ href, name }) => {
-  const isActive =
-    pathname === href || (href.includes('#about') && pathname === '/home')
+						{[
+							{ href: '/', name: 'Home' },
+							{ href: '', name: 'News' },
+							{ href: '/category', name: 'Category' },
+							{ href: '/home#about', name: 'About Us' },
+							{ href: '/contact', name: 'Contact' },
+						].map(({ href, name }) => {
+							const isActive =
+								pathname === href || (href.includes('#about') && pathname === '/home')
 
-  return (
-    <li key={href} className="relative">
-      <Link
-        href={href}
-        className={`
+							return (
+								<li key={href} className="relative">
+									<Link
+										href={href}
+										className={`
           relative inline-block px-1 transition duration-300 hover:scale-110
           ${isActive ? 'text-amber-500' : 'text-white hover:text-amber-500'}
           after:content-[''] after:absolute after:left-1/2 after:bottom-0
           after:h-[2px] after:bg-amber-500 after:w-0 after:transition-all after:duration-300
           hover:after:left-0 hover:after:w-full
         `}
-      >
-        {name}
-      </Link>
+									>
+										{name}
+									</Link>
 
-      {name === 'News' && (
-<span className="absolute -top-1 animate-pulse  w-[9px] h-[9px] bg-red-500 rounded-full"></span>
-      )}
-    </li>
-  )
-})}
+									{name === 'News' && (
+										<span className="absolute -top-1 animate-pulse  w-[9px] h-[9px] bg-red-500 rounded-full"></span>
+									)}
+								</li>
+							)
+						})}
 					</ul>
 
 

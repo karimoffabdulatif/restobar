@@ -310,7 +310,7 @@ const Menu = () => {
         Menu Sections
       </h1>
 
-      <section id="plows" className="mb-20 scroll-mt-24 border-amber-500 border-2 px-4 py-4 rounded-2xl bg-gray-100">
+      <section id="plows" className="mb-20 scroll-mt-24 shadow-2xl border-amber-500 border-2 px-4 py-4 rounded-2xl bg-gray-100">
         <div className='flex  items-center mx-[60px] sm:mx-0 gap-2 pb-4'>
           <div className='border-t border-2 border-amber-500 w-[30px] sm:w-[80px] mt-2'></div>
           <h1 className='text-2xl sm:text-3xl font-bold text-amber-500  sm:px-4 lobster-regular'>
@@ -358,7 +358,7 @@ const Menu = () => {
         </div>
       </section>
 
-      <section id="steyks" className="mb-20 scroll-mt-24 border-amber-500 border-2 px-4 py-4 rounded-2xl bg-gray-100">
+      <section id="steyks" className="mb-20 scroll-mt-24 shadow-2xl border-amber-500 border-2 px-4 py-4 rounded-2xl bg-gray-100">
         <div className='flex  items-center mx-[100px] sm:mx-0 gap-2 pb-4'>
           <div className='border-t border-2 border-amber-500 w-[30px] sm:w-[80px] mt-2'></div>
           <h1 className='text-2xl sm:text-3xl font-bold text-amber-500  sm:px-4 lobster-regular'>
@@ -406,7 +406,7 @@ const Menu = () => {
         </div>
       </section>
 
-      <section id="salads" className="mb-20 scroll-mt-24 border-amber-500 border-2 px-4 py-4 rounded-2xl bg-gray-100">
+      <section id="salads" className="mb-20 scroll-mt-24 shadow-2xl border-amber-500 border-2 px-4 py-4 rounded-2xl bg-gray-100">
         <div className='flex  items-center mx-[100px] sm:mx-0 gap-2 pb-4'>
           <div className='border-t border-2 border-amber-500 w-[30px] sm:w-[80px] mt-2'></div>
           <h1 className='text-2xl sm:text-3xl font-bold text-amber-500  sm:px-4 lobster-regular'>
@@ -454,7 +454,7 @@ const Menu = () => {
         </div>
       </section>
 
-      <section id="drinks" className="mb-20 scroll-mt-24 border-amber-500 border-2 px-4 py-4 rounded-2xl bg-gray-100">
+      <section id="drinks" className="mb-20 scroll-mt-24 shadow-2xl border-amber-500 border-2 px-4 py-4 rounded-2xl bg-gray-100">
         <div className='flex  items-center mx-[100px] sm:mx-0 gap-2 pb-4'>
           <div className='border-t border-2 border-amber-500 w-[30px] sm:w-[80px] mt-2'></div>
           <h1 className='text-2xl sm:text-3xl font-bold text-amber-500  sm:px-4 lobster-regular'>
@@ -502,7 +502,7 @@ const Menu = () => {
         </div>
       </section>
 
-      <section id="hookah" className="mb-20 scroll-mt-24 border-amber-500 border-2 px-4 py-4 rounded-2xl bg-gray-100">
+      <section id="hookah" className="mb-20 scroll-mt-24 shadow-2xl border-amber-500 border-2 px-4 py-4 rounded-2xl bg-gray-100">
         <div className='flex  items-center mx-[100px] sm:mx-0 gap-2 pb-4'>
           <div className='border-t border-2 border-amber-500 w-[30px] sm:w-[80px] mt-2'></div>
           <h1 className='text-2xl sm:text-3xl font-bold text-amber-500  sm:px-4 lobster-regular'>

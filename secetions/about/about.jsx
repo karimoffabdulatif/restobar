@@ -20,7 +20,7 @@ const About = () => {
 
 
     return (
-        <section className='bg-gray-50 py-8'>
+        <section id='abaut' className='bg-gray-50 py-8'>
           <div className='container mx-auto px-8 sm:px-10'>
               <div className='flex justify-center items-center gap-2 pb-4'>
                 <div className='border-t border-2 border-amber-500 w-[80px] sm:w-[100px] mt-2'></div>

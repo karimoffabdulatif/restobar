@@ -7,6 +7,7 @@ import { Autoplay, EffectFade } from 'swiper/modules'
 import { motion } from 'framer-motion'
 import 'swiper/css'
 import 'swiper/css/effect-fade'
+import Link from 'next/link'
 
 const Hero = () => {
 	return (
@@ -62,9 +63,13 @@ const Hero = () => {
 						transition={{ duration: 1.2, delay: 0.3, ease: 'easeOut' }}
 						className="flex gap-4 sm:gap-8 pt-5 ml-2 sm:ml-0 justify-center sm:justify-start"
 					>
-						<button className="bg-amber-500 animate-pulse py-2 px-4 sm:px-10 sm:py-3 text-base sm:text-xl rounded-sm hover:bg-amber-600 transition">
-							Menu
-						</button>
+
+<button className="bg-amber-500 animate-pulse py-2 px-4 sm:px-10 sm:py-3 text-base sm:text-xl rounded-sm hover:bg-amber-600 transition">
+  <Link href="/menu">
+    Menu
+  </Link>
+</button>
+
 						<button className="border-amber-500 border text-amber-500 hover:text-white py-2 px-4 sm:px-10 sm:py-3 text-base sm:text-xl rounded-sm hover:bg-amber-600 transition">
 							Book a table
 						</button>

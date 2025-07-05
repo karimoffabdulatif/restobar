@@ -54,12 +54,18 @@ export default function Header() {
 	}
 
 	return (
-		<header className={`fixed w-full z-50 h-[78px] text-white mt-[-3px] transition-colors duration-300 ${isScrolled ? 'bg-[#0F172B]' : 'bg-transparent'}`}>
+		<header className={`fixed w-full z-50 h-[78px] text-white mt-[-3px] transition-colors duration-300 ${isScrolled ? 'bg-[#0F172B]/98' : 'bg-transparent'}`}>
 			<div className="container mx-auto px-2 sm:px-14 mt-[-52px] flex items-center justify-between py-4 sm:py-2 relative">
 
 				{/* Logo */}
-				<div className="flex ml-3 sm:ml-0 w-[140px] items-center mt-4 sm:mt-0 sm:w-[35%]">
-					<Image src="/mobile-logo.png" alt="Logo" width={170} height={170} />
+				<div className="flex ml-3 sm:ml-0 w-[140px] items-center mt-4 sm:mt-0  sm:w-[35%]">
+					<Image
+						src="/mobile-logo.png"
+						alt="Logo"
+						width={170}
+						height={170}
+						className="transition-transform duration-400 hover:scale-110"
+					/>
 				</div>
 
 				{/* Desktop menyu */}
@@ -70,29 +76,36 @@ export default function Header() {
 							{ href: '/category', name: 'Category' },
 							{ href: '/home#about', name: 'About Us' },
 							{ href: '/contact', name: 'Contact' },
-						].map(({ href, name }) => (
-							<li key={href}>
-								<Link
-									href={href}
-									className={`transition ${
-										pathname === href || (href.includes('#about') && pathname === '/home')
-											? 'text-amber-500'
-											: 'text-white hover:text-amber-500'
-									}`}
-								>
-									{name}
-								</Link>
-							</li>
-						))}
+						].map(({ href, name }) => {
+							const isActive =
+								pathname === href || (href.includes('#about') && pathname === '/home')
+
+							return (
+								<li key={href}>
+									<Link
+										href={href}
+										className={`
+            relative inline-block px-1 transition duration-300 hover:scale-110
+            ${isActive ? 'text-amber-500' : 'text-white hover:text-amber-500'}
+            after:content-[''] after:absolute after:left-1/2 after:bottom-0
+            after:h-[2px] after:bg-amber-500 after:w-0 after:transition-all after:duration-300
+            hover:after:left-0 hover:after:w-full
+          `}
+									>
+										{name}
+									</Link>
+								</li>
+							)
+						})}
 					</ul>
+
 
 					{/* Til tanlash (desktop) */}
 					<div className="relative" ref={langRefDesktop}>
 						<button
 							onClick={() => setOpenLangDesktop(!openLangDesktop)}
-							className={`flex items-center gap-2 rounded-full border-[0.7px] px-2 py-1 text-lg transition duration-300 shadow-md group hover:bg-amber-300/30 ${
-								openLangDesktop ? 'border-amber-500' : 'border-gray-400'
-							}`}
+							className={`flex items-center gap-2 rounded-full border-[0.7px] px-2 py-1 text-lg transition duration-300 shadow-md group hover:bg-amber-300/30 ${openLangDesktop ? 'border-amber-500' : 'border-gray-400'
+								}`}
 						>
 							<span className="flex items-center text-gray-400 transition duration-300 group-hover:text-amber-500">
 								<LanguageIcon />
@@ -115,9 +128,8 @@ export default function Header() {
 									<li
 										key={lang.label}
 										onClick={() => handleLanguageChange(lang.label)}
-										className={`px-3 py-2 rounded-[9px] cursor-pointer transition duration-200 ${
-											selectedLang === lang.label ? 'bg-amber-400/30 border-0.5 border-amber-500' : 'hover:bg-amber-200/30 '
-										}`}
+										className={`px-3 py-2 rounded-[9px] cursor-pointer transition duration-200 ${selectedLang === lang.label ? 'bg-amber-400/30 border-0.5 border-amber-500' : 'hover:bg-amber-200/30 '
+											}`}
 									>
 										<div className="flex items-center gap-2">
 											<span className="text-amber-500">{lang.name}</span>
@@ -154,9 +166,8 @@ export default function Header() {
 							<li key={href}>
 								<Link href={href} onClick={() => setIsSidebarOpen(false)}>
 									<span
-										className={`block text-xl px-4 py-2 rounded-md transition ${
-											pathname === href ? 'text-amber-500' : 'text-white hover:text-amber-500'
-										}`}
+										className={`block text-xl px-4 py-2 rounded-md transition ${pathname === href ? 'text-amber-500' : 'text-white hover:text-amber-500'
+											}`}
 									>
 										{name}
 									</span>
@@ -183,9 +194,8 @@ export default function Header() {
 									<li
 										key={lang.label}
 										onClick={() => handleLanguageChange(lang.label)}
-										className={`flex items-start flex-col gap-1 px-4 py-2 cursor-pointer transition ${
-											selectedLang === lang.label ? 'bg-amber-100 border-l-4 border-amber-500' : 'hover:bg-amber-100'
-										}`}
+										className={`flex items-start flex-col gap-1 px-4 py-2 cursor-pointer transition ${selectedLang === lang.label ? 'bg-amber-100 border-l-4 border-amber-500' : 'hover:bg-amber-100'
+											}`}
 									>
 										<span>{lang.name}</span>
 										<span className="text-[12px] text-gray-500">{lang.Description}</span>

@@ -27,3 +27,18 @@
 html {
   scroll-behavior: smooth;
 }
+
+
+@keyframes storyProgress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Tailwind bilan mos class yaratamiz */
+.animate-storyProgress {
+  animation: storyProgress 30s linear forwards;
+}
